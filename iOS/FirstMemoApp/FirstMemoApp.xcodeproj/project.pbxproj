@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93A645EE25C82EAC0022359D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A645ED25C82EAC0022359D /* Model.swift */; };
 		93E2CFEB25C6CC77006F532C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E2CFEA25C6CC77006F532C /* AppDelegate.swift */; };
 		93E2CFED25C6CC77006F532C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E2CFEC25C6CC77006F532C /* SceneDelegate.swift */; };
 		93E2CFF225C6CC77006F532C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E2CFF025C6CC77006F532C /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		93A645ED25C82EAC0022359D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		93E2CFE725C6CC77006F532C /* FirstMemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstMemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E2CFEA25C6CC77006F532C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93E2CFEC25C6CC77006F532C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93A645EC25C82E840022359D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				93A645ED25C82EAC0022359D /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		93E2CFDE25C6CC77006F532C = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		93E2CFE925C6CC77006F532C /* FirstMemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				93A645EC25C82E840022359D /* Model */,
 				93E2CFEA25C6CC77006F532C /* AppDelegate.swift */,
 				93E2CFEC25C6CC77006F532C /* SceneDelegate.swift */,
 				93E2CFF025C6CC77006F532C /* Main.storyboard */,
@@ -140,6 +151,7 @@
 				93E2CFF525C6CC77006F532C /* FirstMemoApp.xcdatamodeld in Sources */,
 				93E2CFEB25C6CC77006F532C /* AppDelegate.swift in Sources */,
 				93E2CFED25C6CC77006F532C /* SceneDelegate.swift in Sources */,
+				93A645EE25C82EAC0022359D /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

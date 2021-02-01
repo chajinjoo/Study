@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		93E2CFEB25C6CC77006F532C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E2CFEA25C6CC77006F532C /* AppDelegate.swift */; };
 		93E2CFED25C6CC77006F532C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E2CFEC25C6CC77006F532C /* SceneDelegate.swift */; };
-		93E2CFEF25C6CC77006F532C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E2CFEE25C6CC77006F532C /* ViewController.swift */; };
 		93E2CFF225C6CC77006F532C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E2CFF025C6CC77006F532C /* Main.storyboard */; };
 		93E2CFF525C6CC77006F532C /* FirstMemoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93E2CFF325C6CC77006F532C /* FirstMemoApp.xcdatamodeld */; };
 		93E2CFF725C6CC78006F532C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93E2CFF625C6CC78006F532C /* Assets.xcassets */; };
@@ -20,7 +19,6 @@
 		93E2CFE725C6CC77006F532C /* FirstMemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstMemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E2CFEA25C6CC77006F532C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93E2CFEC25C6CC77006F532C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		93E2CFEE25C6CC77006F532C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		93E2CFF125C6CC77006F532C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93E2CFF425C6CC77006F532C /* FirstMemoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FirstMemoApp.xcdatamodel; sourceTree = "<group>"; };
 		93E2CFF625C6CC78006F532C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +58,6 @@
 			children = (
 				93E2CFEA25C6CC77006F532C /* AppDelegate.swift */,
 				93E2CFEC25C6CC77006F532C /* SceneDelegate.swift */,
-				93E2CFEE25C6CC77006F532C /* ViewController.swift */,
 				93E2CFF025C6CC77006F532C /* Main.storyboard */,
 				93E2CFF625C6CC78006F532C /* Assets.xcassets */,
 				93E2CFF825C6CC78006F532C /* LaunchScreen.storyboard */,
@@ -141,7 +138,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				93E2CFF525C6CC77006F532C /* FirstMemoApp.xcdatamodeld in Sources */,
-				93E2CFEF25C6CC77006F532C /* ViewController.swift in Sources */,
 				93E2CFEB25C6CC77006F532C /* AppDelegate.swift in Sources */,
 				93E2CFED25C6CC77006F532C /* SceneDelegate.swift in Sources */,
 			);

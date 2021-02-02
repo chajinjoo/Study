@@ -8,6 +8,13 @@
 import UIKit
 
 class ComposeViewController: UIViewController {
+    
+    // Cancel 버튼 구현
+    @IBAction func close(_ sender: Any) {
+        // 이전 화면으로 전환하는 메서드 (화면 닫기)
+        dismiss(animated: true, completion: nil)
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -11,7 +11,10 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    
+    // 새 메모 Segue를 기본값으로 했을 때 iOS 13.0 이하 버전에서는 검은화면이니까 하단 코드를 추가해줌!
+    var window: UIWindow?
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

@@ -20,9 +20,52 @@ class MemoListTableViewController: UITableViewController {
         f.locale = Locale(identifier: "Ko_kr")
         return f
     }()
+    
+    // viewWillAppear 테이블뷰를 업데이트 해주는 메서드
+    // ViewController가 관리하는 뷰가 화면에 표시되기 직전에 자동으로 호출됨
+    // 여기서 테이블뷰에게 "목록을 업데이트 해!!" 라고 알려주면 됨
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+//        // reloadData() 메서드만 호출하면 데이터소스가 전달해주는 최신 데이터로 업데이트함
+//        tableView.reloadData()
+//        // viewWillAppear 메서드가 실제로 호출됐나 확인하는 로그 추가
+//        print(#function)
+    }
 
+    // 토큰을 저장하는 속성 추가
+    var token: NSObjectProtocol?
+    
+    // 소멸자에서 옵저버를 해제하자
+    deinit {
+        if let token = token {
+            NotificationCenter.default.removeObserver(token)
+        }
+    }
+    
+    // ViewController가 생성된 후, 자동으로 호출됨!
+    // *주로 1번만 실행하는 초기화 코드를 여기서 구현함
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Notification 구현시, 옵저버를 해제하는 것이 젤 중요!(메모리 낭비 방지)
+        // 하단에 addObserver 메서드는 옵저버를 해제할 때 사용하는 객체를 리턴함(토큰이라 부름)
+        // addObserver가 리턴하는 토큰을 token 속성에 저장함
+        // viewDidLoad에서 추가한 옵저버는 뷰가 화면에서 사라지기 전에 해제하거나, 소멸자에서 해제함
+        
+        // 옵저버를 추가하는 코드는 1번만 실행하면 되니까 여기서 구현함
+        // forName: 옵저버를 추가할 Notification의 이름
+        // object: 특별한 이유 없다면 대부분 nil을 전달
+        // 중요!! Notification이 전달되면 테이블뷰를 업데이트 해야함(UI 업데이트)
+        // UI 업데이트는 반드시 "메인 쓰레드"에서 실행해야함!
+        // iOS에서는 쓰레드를 직접 처리하지 않고, DispatchQueue나 OperationQueue를 통해서 처리함
+        // queue: OperationQueue.main << 요래하면 옵저버가 실행하는 코드가 메인 쓰레드에서 실행됨!
+        // using: (Notification) -> Void >> 클로저를 전달
+        // Notification이 전달되면 using 파라미터에 전달한 클로저가
+        // queue 파라미터로 전달한 쓰레드에서 실행됨
+        token = NotificationCenter.default.addObserver(forName: ComposeViewController.newMemoDidInsert, object: nil, queue: OperationQueue.main) { [weak self] (noti) in
+            self?.tableView.reloadData() // 테이블뷰를 리로드
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

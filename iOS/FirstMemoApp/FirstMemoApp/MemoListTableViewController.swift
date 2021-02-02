@@ -8,6 +8,18 @@
 import UIKit
 
 class MemoListTableViewController: UITableViewController {
+    // DateFormatter형의 formatter 상수 프로퍼티를 클로저로 초기화함
+    // 생성과 동시에 여러 프로퍼티를 초기화 할 때 클로저가 편함
+    let formatter: DateFormatter = {
+        // f 인스턴스 생성
+        let f = DateFormatter()
+        // 날짜, 시간 스타일 설정
+        f.dateStyle = .long
+        f.timeStyle = .short
+        // 한국어 설정
+        f.locale = Locale(identifier: "Ko_kr")
+        return f
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +53,9 @@ class MemoListTableViewController: UITableViewController {
         // indexPath[section, row]로 이뤄진 테이블뷰의 행을 식별하는 상대적인 인덱스 경로
         let target = Memo.dummyMemoList[indexPath.row]
         cell.textLabel?.text = target.content
-        cell.detailTextLabel?.text = target.insertDate.description
+        // formatter에서 string(from: ) 메서드를 호출하고 해당 날짜를 전달하면,
+        // 위에서 지정한 스타일로 포메팅해서 문자열로 리턴해줌
+        cell.detailTextLabel?.text = formatter.string(from: target.insertDate)
 
         return cell
     }

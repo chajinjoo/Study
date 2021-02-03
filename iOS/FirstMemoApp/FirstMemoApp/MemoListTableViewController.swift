@@ -43,6 +43,17 @@ class MemoListTableViewController: UITableViewController {
         }
     }
     
+    // 세그웨이가 연결된 화면을 생성하고 화면을 전환하기 직전에 호출되는 메서드
+    // segue: 현재 실행중인 세그웨이가 전달
+    // sender: 세그웨이로 연결된 첫번째 셀
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
+            if let vc = segue.destination as? DetailViewController {
+                vc.memo = Memo.dummyMemoList[indexPath.row]
+            }
+        }
+    }
+    
     // ViewController가 생성된 후, 자동으로 호출됨!
     // *주로 1번만 실행하는 초기화 코드를 여기서 구현함
     override func viewDidLoad() {

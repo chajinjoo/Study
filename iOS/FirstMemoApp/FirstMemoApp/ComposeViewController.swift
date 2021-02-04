@@ -34,8 +34,8 @@ class ComposeViewController: UIViewController {
         }
         // guard문이 true면 이 코드 실행!
         // 새로운 메모 인스턴스를 생성하고 dummyMemoList 배열에 저장
-        let newMemo = Memo(content: memo)
-        Memo.dummyMemoList.append(newMemo)
+//        let newMemo = Memo(content: memo)
+//        Memo.dummyMemoList.append(newMemo)
         
         // 새 메모 화면을 닫기 전에 Notification을 전달함
         // Notification은 앱을 구성하는 모든 객체로 전달됨 (잘못된 설명이지만 일단 큰틀은 이렇게 이해하자!)

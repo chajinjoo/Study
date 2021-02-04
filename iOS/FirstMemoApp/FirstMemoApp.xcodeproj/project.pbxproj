@@ -12,6 +12,7 @@
 		9361372225CADA8F0079F9AE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361372125CADA8F0079F9AE /* DetailViewController.swift */; };
 		93A645EE25C82EAC0022359D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A645ED25C82EAC0022359D /* Model.swift */; };
 		93A645F325C8328C0022359D /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A645F225C8328C0022359D /* MemoListTableViewController.swift */; };
+		93CB62C525CC272400C57F9C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CB62C425CC272400C57F9C /* DataManager.swift */; };
 		93E2CFEB25C6CC77006F532C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E2CFEA25C6CC77006F532C /* AppDelegate.swift */; };
 		93E2CFED25C6CC77006F532C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E2CFEC25C6CC77006F532C /* SceneDelegate.swift */; };
 		93E2CFF225C6CC77006F532C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E2CFF025C6CC77006F532C /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		9361372125CADA8F0079F9AE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		93A645ED25C82EAC0022359D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		93A645F225C8328C0022359D /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
+		93CB62C425CC272400C57F9C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		93E2CFE725C6CC77006F532C /* FirstMemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstMemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E2CFEA25C6CC77006F532C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93E2CFEC25C6CC77006F532C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		93CB62C325CC270F00C57F9C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				93CB62C425CC272400C57F9C /* DataManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		93E2CFDE25C6CC77006F532C = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 		93E2CFE925C6CC77006F532C /* FirstMemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				93CB62C325CC270F00C57F9C /* Data */,
 				93A645EC25C82E840022359D /* Model */,
 				93E2CFEA25C6CC77006F532C /* AppDelegate.swift */,
 				93E2CFEC25C6CC77006F532C /* SceneDelegate.swift */,
@@ -167,6 +178,7 @@
 				93E2CFED25C6CC77006F532C /* SceneDelegate.swift in Sources */,
 				93A645EE25C82EAC0022359D /* Model.swift in Sources */,
 				9309679225C99AE0007168B1 /* UIViewController+Alert.swift in Sources */,
+				93CB62C525CC272400C57F9C /* DataManager.swift in Sources */,
 				9361372225CADA8F0079F9AE /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

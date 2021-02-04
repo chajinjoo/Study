@@ -27,6 +27,10 @@ class MemoListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        DataManager.shared.fetchMemo()
+        tableView.reloadData()
+        
+        
 //        // reloadData() 메서드만 호출하면 데이터소스가 전달해주는 최신 데이터로 업데이트함
 //        tableView.reloadData()
 //        // viewWillAppear 메서드가 실제로 호출됐나 확인하는 로그 추가
@@ -49,7 +53,7 @@ class MemoListTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
             if let vc = segue.destination as? DetailViewController {
-                vc.memo = Memo.dummyMemoList[indexPath.row]
+                vc.memo = DataManager.shared.memoList[indexPath.row]
             }
         }
     }
@@ -92,7 +96,7 @@ class MemoListTableViewController: UITableViewController {
     // numberOfRowsInSection : 테이블뷰의 섹션에 있는 행의 갯수를 리턴
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Memo.dummyMemoList.count // dummyMemoList 배열의 갯수를 리턴
+        return DataManager.shared.memoList.count // dummyMemoList 배열의 갯수를 리턴
     }
 
     // 가장 중요한 메서드
@@ -105,11 +109,11 @@ class MemoListTableViewController: UITableViewController {
         // Configure the cell...
         // cell을 리턴하기 전에 메모와 날짜를 출력
         // indexPath[section, row]로 이뤄진 테이블뷰의 행을 식별하는 상대적인 인덱스 경로
-        let target = Memo.dummyMemoList[indexPath.row]
+        let target = DataManager.shared.memoList[indexPath.row]
         cell.textLabel?.text = target.content
         // formatter에서 string(from: ) 메서드를 호출하고 해당 날짜를 전달하면,
         // 위에서 지정한 스타일로 포메팅해서 문자열로 리턴해줌
-        cell.detailTextLabel?.text = formatter.string(from: target.insertDate)
+        cell.detailTextLabel?.text = formatter.string(for: target.insertDate)
 
         return cell
     }

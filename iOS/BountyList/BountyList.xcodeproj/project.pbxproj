@@ -13,6 +13,7 @@
 		93F9F33225D158CA006845E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93F9F33125D158CA006845E6 /* Assets.xcassets */; };
 		93F9F33525D158CA006845E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F9F33325D158CA006845E6 /* LaunchScreen.storyboard */; };
 		93F9F33F25D15B01006845E6 /* BountyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F9F33E25D15B01006845E6 /* BountyViewController.swift */; };
+		93F9F34325D18F60006845E6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F9F34225D18F60006845E6 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		93F9F33425D158CA006845E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93F9F33625D158CA006845E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93F9F33E25D15B01006845E6 /* BountyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BountyViewController.swift; sourceTree = "<group>"; };
+		93F9F34225D18F60006845E6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				93F9F33625D158CA006845E6 /* Info.plist */,
 				93F9F32825D158C9006845E6 /* AppDelegate.swift */,
 				93F9F33E25D15B01006845E6 /* BountyViewController.swift */,
+				93F9F34225D18F60006845E6 /* DetailViewController.swift */,
 				93F9F32A25D158C9006845E6 /* SceneDelegate.swift */,
 				93F9F33125D158CA006845E6 /* Assets.xcassets */,
 				93F9F33325D158CA006845E6 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 				93F9F32925D158C9006845E6 /* AppDelegate.swift in Sources */,
 				93F9F33F25D15B01006845E6 /* BountyViewController.swift in Sources */,
 				93F9F32B25D158C9006845E6 /* SceneDelegate.swift in Sources */,
+				93F9F34325D18F60006845E6 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

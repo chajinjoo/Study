@@ -33,6 +33,11 @@ class BountyViewController: UIViewController, UITableViewDataSource, UITableView
             return UITableViewCell()
         }
         
+        let img = UIImage(named: "\(nameList[indexPath.row]).jpg")
+        cell.imgView.image = img
+        cell.nameLabel.text = nameList[indexPath.row]
+        cell.bountyLabel.text = "\(bountyList[indexPath.row])"
+        
         return cell
     }
 
@@ -40,6 +45,8 @@ class BountyViewController: UIViewController, UITableViewDataSource, UITableView
     // 테이블 뷰 클릭하면 어떻게 할까?
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("--> \(indexPath.row)")
+        // 연결한 세그웨이 수행해라!
+        performSegue(withIdentifier: "showDetail", sender: nil)
     }
 
 }

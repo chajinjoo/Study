@@ -106,18 +106,48 @@
                                     <action selector="close:" destination="yRF-Ru-ExT" eventType="touchUpInside" id="LDb-e6-7OW"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qlT-Vy-FUI">
+                                <rect key="frame" x="50" y="100" width="314" height="448.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qlT-Vy-FUI" secondAttribute="height" multiplier="7:10" id="0up-Ie-0Zi"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Luffy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yU8-am-W6h">
+                                <rect key="frame" x="170.5" y="598.5" width="73.5" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVY-OE-RGi">
+                                <rect key="frame" x="127" y="671.5" width="160" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z1W-LC-CSD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="qlT-Vy-FUI" firstAttribute="leading" secondItem="Z1W-LC-CSD" secondAttribute="leading" constant="50" id="1Wg-0e-UTf"/>
+                            <constraint firstItem="yU8-am-W6h" firstAttribute="top" secondItem="qlT-Vy-FUI" secondAttribute="bottom" constant="50" id="6DO-Ab-n5P"/>
+                            <constraint firstItem="yU8-am-W6h" firstAttribute="centerX" secondItem="qlT-Vy-FUI" secondAttribute="centerX" id="Jc8-Jb-aSa"/>
                             <constraint firstItem="Z1W-LC-CSD" firstAttribute="trailing" secondItem="wZx-5m-COm" secondAttribute="trailing" constant="16" id="Ob4-6h-R8x"/>
+                            <constraint firstItem="JVY-OE-RGi" firstAttribute="centerX" secondItem="yU8-am-W6h" secondAttribute="centerX" id="h7W-Ma-sL9"/>
+                            <constraint firstItem="JVY-OE-RGi" firstAttribute="top" secondItem="yU8-am-W6h" secondAttribute="bottom" constant="37" id="kOi-T1-3B3"/>
                             <constraint firstItem="wZx-5m-COm" firstAttribute="top" secondItem="Z1W-LC-CSD" secondAttribute="top" constant="20" id="p0h-Dw-91c"/>
+                            <constraint firstItem="qlT-Vy-FUI" firstAttribute="top" secondItem="Z1W-LC-CSD" secondAttribute="top" constant="100" id="uiD-IY-d4b"/>
+                            <constraint firstItem="qlT-Vy-FUI" firstAttribute="centerX" secondItem="Z1W-LC-CSD" secondAttribute="centerX" id="z8T-bu-JiC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bountyLabel" destination="JVY-OE-RGi" id="eIh-xi-JB7"/>
+                        <outlet property="imgView" destination="qlT-Vy-FUI" id="4zR-b6-ZF3"/>
+                        <outlet property="nameLabel" destination="yU8-am-W6h" id="P73-NU-euu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ld2-Ej-Zuh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="973.91304347826099" y="116.51785714285714"/>
+            <point key="canvasLocation" x="973.91304347826099" y="112.5"/>
         </scene>
     </scenes>
     <resources>

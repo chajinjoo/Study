@@ -10,9 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let ballArray = [#imageLiteral(resourceName: "ball1.png"),#imageLiteral(resourceName: "ball2.png"),#imageLiteral(resourceName: "ball3.png"),#imageLiteral(resourceName: "ball4.png"),#imageLiteral(resourceName: "ball5.png")]
-
-
-
+    let ballArray = [#imageLiteral(resourceName: "ball1"),#imageLiteral(resourceName: "ball4"),#imageLiteral(resourceName: "ball3"),#imageLiteral(resourceName: "ball2"),#imageLiteral(resourceName: "ball1")]
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // 앱 실행시 나올 이미지 지정
+        imageView.image = ballArray[2]
+    }
+    
+    @IBAction func askButtonPressed(_ sender: Any) {
+        // ballArray[Int.random(in: 0...4)] 도 가능
+        imageView.image = ballArray.randomElement()
+    }
+    
 }
 

@@ -16,8 +16,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // 앱 실행시 나올 이미지 지정
-        imageView.image = ballArray[2]
     }
     
     @IBAction func askButtonPressed(_ sender: Any) {

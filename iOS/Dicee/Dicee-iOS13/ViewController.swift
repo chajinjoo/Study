@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func rollButtonPressed(_ sender: Any) {
+        // diceArray[Int.random(in: 0...5)] 도 가능
         firstDice.image = diceArray.randomElement()
         secondDice.image = diceArray.randomElement()
     }
